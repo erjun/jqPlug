@@ -1,0 +1,28 @@
+{
+  "name": "jqPlug",
+  "title": "Jqplug",
+  "description": "The best jQuery plugin ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/erjun/jqPlug",
+  "author": {
+    "name": "erjun",
+    "email": "993911924@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/erjun/jqPlug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erjun/jqPlug/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/erjun/jqPlug/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

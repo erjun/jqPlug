@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../libs/jquery/jquery.js"></script>
+    <script type="text/javascript" src="../src/popup.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".notice").popup({showElem:$("table"),hideElem:$("body")});
+        });
+    </script>
+    <style type="text/css">
+        .notice{display:none;}
+    </style>
+</head>
+<body data-dismiss="popup">
+    <h3>Options</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>type</td>
+                <td>default</td>
+                <td>description</td>
+            </tr>
+        </thead>
+        <tr>
+            <td>shade</td>
+            <td>boolean | number</td>
+        </tr>
+    </table>
+    <div class="notice">
+        xxx
+    </div>
+</body>
+</html>
