@@ -1,4 +1,3 @@
-
 !function($){
 
     "use strict"
@@ -8,29 +7,29 @@
 
     var Popup = function (elem, options) {
         this.Status = 'off'
-        this.init(elem, options)
+        this.$elem = $(elem)
+        this.options = options
+        this.init()
     }
 
     Popup.prototype = {
 
-        init: function(elem, options){
-            this.$elem = $(elem)
+        init: function(){
+            var options = this.options
             options.shade == null ? this.$elemBox = this.$elem : this.$elemBox = this.$elem.wrap("<div class='popup-box'></div>").after("<div class='popup-shade'></div>")
 
             var $self = this
               , $clone = this.$elem.clone().css({display:'block',position:'absolute',top:'-100000px'}).appendTo("body")
-              , $elemTop = options.elemTop
-              , $elemLeft = options.elemLeft
               , $cloneWidth = $clone.width()
               , $cloneHeight = $clone.height()
               , $window = $(window)
 
             $clone.remove()
-            $elemTop === null ? $elemTop = $window.height() / 2 - $cloneHeight / 2 : null
-            $elemLeft === null ? $elemLeft = $window.width() / 2 - $cloneWidth / 2 : null 
+            options.elemTop === null ? $cloneHeight = $window.height() / 2 - $cloneHeight / 2 : $cloneHeight = options.elemTop
+            options.elemLeft === null ? $cloneWidth = $window.width() / 2 - $cloneWidth / 2 : $cloneWidth = options.elemLeft 
 
             this.$elem.css({
-                position:"absolute",top:$elemTop,left:$elemLeft
+                position:"absolute",top:$cloneHeight,left:$cloneWidth
             })
 
             options.showElem != null && $(document).on('click', function (event) {
@@ -71,7 +70,6 @@
               , data = $this.data('popup')
               , options = $.extend({}, $.fn.popup.defaults, typeof option == 'object' && option) 
             if(!data) $this.data('popup', (data = new Popup(this, options)))
-            //return new Popup(this, options)
         })
     }
 
