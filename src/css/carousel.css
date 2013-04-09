@@ -1,0 +1,9 @@
+.slideBox{position:relative;width:1024px;} 
+.slide{overflow:hidden;zoom:1;}
+.slide:after{content:'';display:block;clear:both;} 
+.slide .item { float: left;display:none; } 
+.slide .item.active{display:block;} 
+.slide img{width:1024px;height:500px;}
+.slideBox .prev, .slideBox .next { position: absolute; top: 38%; z-index:9; width: 23px; height: 46px;cursor:pointer;background:#333;}
+ .slideBox .next{right:0;} 
+

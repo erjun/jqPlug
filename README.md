@@ -14,9 +14,9 @@ In your web page:
 <script src="jquery.js"></script>
 <script src="dist/jqPlug.min.js"></script>
 <script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
+    $(function(){
+        $(".notice").popup({showElem:$("table"),hideElem:$("body")});
+    });
 </script>
 ```
 

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <script type="text/javascript" src="../libs/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../src/js/carousel.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                    $(".slide").carousel({interval:null,changeType:'base',imgShowTime:0,imgHideTime:0,inputType:null}).on('slid',function(){
+                        console.log('slid')
+                        }) 
+            })
+</script>
+<link rel="stylesheet" href="../src/css/reset.css" />
+<link rel="stylesheet" href="../src/css/carousel.css" />
+</head>
+<body>
+    <div class="slideBox" >
+        <a href="#slide" data-slide="prev" class="prev"></a>
+        <ul class="slide" id="slide">
+            <li class="item active"><a href=""><img src="../src/img/00.jpg" alt="" /></a></li>
+            <li class="item"><a href=""><img src="../src/img/01.jpg" alt="" /></a></li>
+            <li class="item"><a href=""><img src="../src/img/02.jpg" alt="" /></a></li>
+            <li class="item"><a href=""><img src="../src/img/03.jpg" alt="" /></a></li>
+            <li class="item"><a href=""><img src="../src/img/04.jpg" alt="" /></a></li>
+        </ul>
+        <a href="#slide" data-slide="next" class="next"></a>
+    </div>
+
+</body>
+</html>
